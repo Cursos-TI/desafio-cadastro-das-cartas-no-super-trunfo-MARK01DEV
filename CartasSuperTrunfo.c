@@ -1,13 +1,3 @@
-/*
-iNFORMAÇÕES DAS CARTAS
-ESTADO(CHAR)
-CARTA(CHAR[])
-NOME DA CIDADE(CHAR[])
-POPULAÇÃO(INT)
-AREA EM KM2(FLOAT)
-PIB(FLOAT)
-NUMERO DE PONTOS TURISTICOS(INT)
-*/
 #include <stdio.h>
 
 int main()
@@ -15,21 +5,17 @@ int main()
     ////////////////////////////////////////////////////////////////////////////////////////
     /// CONEXÃO
     ////////////////////////////////////////////////////////////////////////////////////////
-    char estado[50], estado2[50];
-    char carta[50], carta2[50];
-    char cidade[50], cidade2[50];
-    int populacao, populacao2;
-    float area, area2;
-    float pib, pib2;
-    int pontos_turisticos, pontos_turisticos2;
+    char estado[50], estado2[50], carta[50], carta2[50], cidade[50], cidade2[50];
+    int populacao, populacao2, pontos_turisticos, pontos_turisticos2;
+    float pib, pib2, area, area2, resultadopop,resultadopop2, resultadopib, resultadopib2;
     ////////////////////////////////////////////////////////////////////////////////////////
     /// INICIAL
     ////////////////////////////////////////////////////////////////////////////////////////
-    printf("Seja bem vindo\n");
+    printf("*** Seja bem vindo ***\n");
     ////////////////////////////////////////////////////////////////////////////////////////
-    /// QUEST 2
+    /// QUEST 1
     ////////////////////////////////////////////////////////////////////////////////////////
-    printf("Vamos para a carta 1\n");
+    printf("*** Vamos para a carta 1 *** \n");
     ////////////////////////////////////////////////////////////////////////////////////////
     printf("Digite o estado: ");
     scanf("%s", &estado);
@@ -55,7 +41,7 @@ int main()
     ////////////////////////////////////////////////////////////////////////////////////////
     /// QUEST 2
     ////////////////////////////////////////////////////////////////////////////////////////
-    printf("Vamos para a carta 2\n");
+    printf("*** Vamos para a carta 2 *** \n");
     ////////////////////////////////////////////////////////////////////////////////////////
     printf("Digite o estado: ");
     scanf("%s", &estado2);
@@ -77,7 +63,14 @@ int main()
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontos_turisticos2);
-
+    //////////////////////////////////////////////////////////////////////////////////////////
+    //// FUNÇÃO DE RESULTADO
+    //////////////////////////////////////////////////////////////////////////////////////////
+    resultadopop = populacao / area;
+    resultadopib = pib / populacao;
+    //////////////////////////////////////////////////////////////////////////////////////////
+    resultadopop2 = populacao2 / area2;
+    resultadopib2 = pib2 / populacao2;
     //////////////////////////////////////////////////////////////////////////////////////////
     //// TITULO 1
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -92,7 +85,8 @@ int main()
     printf("\tÁrea em km2: %.2f\n", area);
     printf("\tPIB: %.2f\n", pib);
     printf("\tNúmero de pontos turísticos: %d\n", pontos_turisticos);
-
+    printf("\tResultado da população por km2: %.2f\n", resultadopop);
+    printf("\tResultado do PIB por população: %.2f\n", resultadopib);
     //////////////////////////////////////////////////////////////////////////////////////////
     //// TITULO 2
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -107,6 +101,8 @@ int main()
     printf("\tÁrea em km2: %.2f\n", area2);
     printf("\tPIB: %.2f\n", pib2);
     printf("\tNúmero de pontos turísticos: %d\n", pontos_turisticos2);
+    printf("\tResultado da população por km2: %.2f\n", resultadopop2);
+    printf("\tResultado do PIB por população: %.2f\n", resultadopib2);
 
     return 0;
 }
